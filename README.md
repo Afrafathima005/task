@@ -2,12 +2,12 @@
 
 A simple task management web app built for an AI-assisted development assessment. It meets all required functional flows and adds light usability improvements without expanding into a large product.
 
-## Submission links (fill before sending)
+## Submission links 
 
 | Item | Link |
 |------|------|
-| **Source code** | _Add your GitHub repository URL_ |
-| **Live app** | _Add your Vercel (or other) deployment URL_ |
+| **Source code** | https://github.com/Afrafathima005/task |
+| **Live app** task-jtcs.vercel.app
 | **User documentation** | [docs/USER_GUIDE.md](./docs/USER_GUIDE.md) |
 | **AI usage summary** | [AI_USAGE_SUMMARY.md](./AI_USAGE_SUMMARY.md) |
 
@@ -52,12 +52,6 @@ In [Firebase Console](https://console.firebase.google.com/):
 
 Copy the example file and fill in your Firebase web app config:
 
-```bash
-cp .env.example .env.local
-```
-
-Edit `.env.local`:
-
 ```env
 NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
@@ -68,26 +62,9 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 
-### 4. Database security rules (recommended)
 
-Under **Realtime Database → Rules**, use rules that restrict tasks to the signed-in owner. Example:
 
-```json
-{
-  "rules": {
-    "tasks": {
-      "$taskId": {
-        ".read": "auth != null && data.child('userId').val() === auth.uid",
-        ".write": "auth != null && (!data.exists() || data.child('userId').val() === auth.uid) && newData.child('userId').val() === auth.uid"
-      }
-    }
-  }
-}
-```
-
-For local testing only, you may temporarily use test mode; switch to the rules above before deploying publicly.
-
-### 5. Run locally
+### 4. Run locally
 
 ```bash
 npm run dev
@@ -132,20 +109,7 @@ Full list: [docs/USER_GUIDE.md § Assumptions](./docs/USER_GUIDE.md#3-important-
 
 Full list: [docs/USER_GUIDE.md § Limitations](./docs/USER_GUIDE.md#4-known-limitations).
 
-## Project structure
 
-```
-task-manager-app/
-├── app/
-│   ├── page.tsx          # Main UI + auth + task CRUD
-│   ├── layout.tsx
-│   └── globals.css
-├── firebase/
-│   └── config.ts         # Firebase initialization
-├── docs/                 # Assessment documentation
-├── AI_USAGE_SUMMARY.md
-├── .env.example
-└── README.md
 ```
 
 ## Quick test script (for reviewers)
