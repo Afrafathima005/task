@@ -7,7 +7,7 @@ A simple task management web app built for an AI-assisted development assessment
 | Item | Link |
 |------|------|
 | **Source code** | https://github.com/Afrafathima005/task |
-| **Live app** |task-jtcs.vercel.app|
+| **Live app** | https://task-jtcs.vercel.app|
 | **User documentation** | [docs/USER_GUIDE.md](./docs/USER_GUIDE.md) |
 | **AI usage summary** | [AI_USAGE_SUMMARY.md](./AI_USAGE_SUMMARY.md) |
 
