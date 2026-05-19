@@ -26,15 +26,6 @@ All three required statuses are enforced in TypeScript (`TaskStatus`) and in the
 | Logout not listed | Sign out provided | Expected companion to Google sign-in |
 | “View tasks” — all vs filtered | Show all user tasks; optional status filter | Default view = full list; filters are additive |
 
-## Scope discipline (what we did **not** build)
-
-To respect “do not unnecessarily expand scope”:
-
-- No projects, tags, priorities, or subtasks  
-- No multi-user collaboration or assignments  
-- No email reminders, push notifications, or calendars  
-- No admin panel, analytics backend, or REST API layer  
-- No offline/PWA sync  
 
 ## Usability improvements (within assessment intent)
 
