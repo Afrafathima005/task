@@ -15,24 +15,7 @@ Deploy the Next.js frontend to **Vercel** (or similar) and keep **Firebase** as 
 3. **Realtime Database** → Create database (start in **test mode** for quick local dev, then apply rules below).  
 4. **Project settings** → Your apps → Web app → copy config into environment variables.
 
-### Recommended Realtime Database rules
 
-Replace open test rules before sharing a public URL:
-
-```json
-{
-  "rules": {
-    "tasks": {
-      "$taskId": {
-        ".read": "auth != null && data.child('userId').val() === auth.uid",
-        ".write": "auth != null && (!data.exists() || data.child('userId').val() === auth.uid) && newData.child('userId').val() === auth.uid"
-      }
-    }
-  }
-}
-```
-
-Publish rules under **Realtime Database → Rules**.
 
 ## Step 2 — Deploy to Vercel
 
@@ -54,16 +37,7 @@ Firebase → **Authentication** → **Settings** → **Authorized domains** → 
 2. Sign in with Google.  
 3. Create a task, change status, sign out and back in — task should persist.
 
-## Submission checklist
 
-Fill in for your assessment submission:
-
-| Item | Your value |
-|------|------------|
-| GitHub repository URL | `https://github.com/YOUR_USERNAME/task-manager-app` |
-| Live application URL | `https://YOUR_APP.vercel.app` |
-| Documentation | README + `docs/USER_GUIDE.md` |
-| AI usage summary | `AI_USAGE_SUMMARY.md` |
 
 ## Troubleshooting
 
