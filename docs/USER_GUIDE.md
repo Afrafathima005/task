@@ -69,28 +69,9 @@ See [REQUIREMENTS_AND_ASSUMPTIONS.md](./REQUIREMENTS_AND_ASSUMPTIONS.md) for how
 
 ---
 
-## 4. Known limitations
 
-- **No collaboration** — tasks cannot be shared with other users.
-- **No reminders or notifications** — due dates are display-only.
-- **No offline support** — requires network access to Firebase.
-- **No task descriptions or attachments** — title and status only (plus optional due date).
-- **Basic security model** — relies on Firebase Auth + database rules; not enterprise-hardened.
-- **Delete is permanent** — no trash or undo.
-- **Single-page app** — all functionality on one screen; no separate admin or settings pages.
 
----
-
-## 5. Important notes and warnings for users
-
-- **Do not share Firebase API keys publicly** in screenshots or repos; use environment variables (`.env.local` is git-ignored).
-- **Pop-up blockers** may prevent Google sign-in; allow pop-ups for this site.
-- **Third-party services**: Google (authentication) and Firebase (data) process your sign-in and task data according to their terms.
-- **Assessment demo data**: If using a shared Firebase project, other testers with access could theoretically see data unless database rules restrict reads/writes by `auth.uid` (recommended for production; see README Firebase section).
-
----
-
-## 6. Setup instructions (for developers / reviewers)
+## 5. Setup instructions (for developers / reviewers)
 
 Full developer setup is in the [README](../README.md#setup-instructions).
 
