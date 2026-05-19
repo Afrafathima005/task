@@ -89,7 +89,7 @@ See [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) for Vercel + Firebase authorized 
 |----------|---------|
 | [docs/USER_GUIDE.md](./docs/USER_GUIDE.md) | How to use the app, login, assumptions, limitations, warnings |
 | [docs/REQUIREMENTS_AND_ASSUMPTIONS.md](./docs/REQUIREMENTS_AND_ASSUMPTIONS.md) | Requirement traceability and scope decisions |
-| [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) | Hosting and submission checklist |
+
 | [AI_USAGE_SUMMARY.md](./AI_USAGE_SUMMARY.md) | AI tools, usage, prompts, manual corrections |
 
 ## Assumptions (summary)
